@@ -1,89 +1,58 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <style>
-        body {
-            display: flex;
-            background-color: white;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        
-        /* 左側のメニュー */
-        .sidebar {
-            width: 250px;
-            padding: 20px;
-            position: fixed;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border-right: 1px solid #ddd;
-        }
-        
-        .sidebar h1 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        
-        .sidebar nav {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .sidebar a {
-            text-decoration: none;
-            color: black;
-            font-size: 16px;
-        }
-        
-        /* 画像ギャラリー */
-        .gallery {
-    margin-left: 270px;
+body {
+    display: flex;
+    background-color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 左側のメニュー */
+.sidebar {
+    width: 250px;
     padding: 20px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+/* 画像ギャラリー */
+.gallery {
+    padding-left: 270px;
+    padding-top: 20px;
     width: calc(100% - 270px);
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    overflow-y: auto; /* ← スクロール可能にする */
+    overflow-y: auto;
 }
 
-        
-        .gallery img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    
-    <!-- 左側メニュー -->
-    <aside class="sidebar">
-        <h1>UDA TOMA</h1>
-        <nav>
-            <a href="#profile">Profile</a>
-            <a href="#books">Books</a>
-            <a href="#shop">Shop</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
-        </nav>
-    </aside>
-    
-    <!-- 画像ギャラリー -->
-    <section class="gallery">
-        <img src="image1.jpg" alt="Photo 1">
-        <img src="image2.jpg" alt="Photo 2">
-        <img src="image3.jpg" alt="Photo 3">
-        <img src="image4.jpg" alt="Photo 4">
-        <img src="image5.jpg" alt="Photo 5">
-    </section>
-    
-</body>
-</html>
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
