@@ -7,32 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <h1 class="logo">Toma Uda</h1>
+    
+    <!-- 左側メニュー -->
+    <aside class="sidebar">
+        <h1>UDA TOMA</h1>
         <nav>
-            <a href="#">Selected Work</a>
-            <a href="#">Information</a>
-            <a href="#">Instagram</a>
+            <a href="#profile">Profile</a>
+            <a href="#books">Books</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
         </nav>
-    </header>
-
-    <div class="image-container" id="imageContainer">
-        <img src="DSC01033.jpg" class="active" alt="Portfolio image">
-        <img src="DSC01008.jpg" alt="Portfolio image">
-        <img src="DSC01009.jpg" alt="Portfolio image">
-    </div>
-
-    <script>
-        const images = document.querySelectorAll(".image-container img");
-        let currentIndex = 0;
-
-        document.getElementById("imageContainer").onclick = function () {
-            images[currentIndex].classList.remove("active");
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].classList.add("active");
-        };
-    </script>
-
+    </aside>
+    
+    <!-- 画像ギャラリー -->
+    <section class="gallery">
+        <img src="./images/image1.jpg" alt="Photo 1">
+        <img src="./images/image2.jpg" alt="Photo 2">
+        <img src="./images/image3.jpg" alt="Photo 3">
+        <img src="./images/image4.jpg" alt="Photo 4">
+        <img src="./images/image5.jpg" alt="Photo 5">
+    </section>
+    
 </body>
 </html>
