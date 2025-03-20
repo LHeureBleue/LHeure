@@ -1,30 +1,4 @@
-/* 画像コンテナのサイズをさらに縮小 */
-.image-container {
-    width: 15vw;  /* ビューポートの幅の 15% (さらに小さく) */
-    height: 15vh; /* ビューポートの高さの 15% */
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* 画像のスタイル */
-img {
-    width: 100%;  /* 親要素 (.image-container) に合わせる */
-    height: auto;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    position: absolute;
-}
-
-/* アクティブな画像を表示 */
-img.active {
-    opacity: 1;
-}
-
-/* 全体を中央揃え */
+/* 背景と基本スタイル */
 body {
     background-color: black;
     color: white;
@@ -36,4 +10,31 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+/* 画像コンテナのサイズをさらに縮小 */
+.image-container {
+    width: 15vw;  /* 画像サイズをさらに小さく */
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* 画像同士の間隔を調整 (40px) */
+}
+
+/* 画像のスタイル */
+img {
+    width: 100%;  /* 親要素 (.image-container) に合わせる */
+    height: auto;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: block; /* 画像を縦に並べる */
+}
+
+/* アクティブな画像を表示 */
+img.active {
+    opacity: 1;
 }
