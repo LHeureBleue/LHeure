@@ -5,6 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const imagesPerPage = 3; // 1ページに表示する画像の数
+            const images = document.querySelectorAll(".gallery img");
+            const totalPages = Math.ceil(images.length / imagesPerPage);
+            let currentPage = 1;
+
+            function showPage(page) {
+                images.forEach((img, index) => {
+                    img.style.display = (index >= (page - 1) * imagesPerPage && index < page * imagesPerPage) ? "block" : "none";
+                });
+            }
+
+            function updatePagination() {
+                document.getElementById("page-number").textContent = `Page ${currentPage} of ${totalPages}`;
+            }
+
+            document.getElementById("prev-btn").addEventListener("click", function () {
+                if (currentPage > 1) {
+                    currentPage--;
+                    showPage(currentPage);
+                    updatePagination();
+                }
+            });
+
+            document.getElementById("next-btn").addEventListener("click", function () {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    showPage(currentPage);
+                    updatePagination();
+                }
+            });
+
+            showPage(currentPage);
+            updatePagination();
+        });
+    </script>
 </head>
 <body>
     
@@ -24,11 +61,17 @@
     <!-- 画像ギャラリー -->
     <section class="gallery">
         <img src="DSC01033.jpg" alt="Photo 1">
-        <img src="DSC01009.jpg" alt="Photo 2">
-        <img src="DSC01008.jpg" alt="Photo 3">
+        <img src="DSC01008.jpg" alt="Photo 2">
+        <img src="DSC01009jpg" alt="Photo 3">
         <img src="./images/image4.jpg" alt="Photo 4">
         <img src="./images/image5.jpg" alt="Photo 5">
     </section>
     
+    <!-- ページネーション -->
+    <div class="pagination">
+        <button id="prev-btn">Previous</button>
+        <span id="page-number"></span>
+        <button id="next-btn">Next</button>
+    </div>
 </body>
 </html>
