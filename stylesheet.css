@@ -1,9 +1,12 @@
-/* 画像コンテナのサイズを縮小 */
+/* 画像コンテナのサイズをさらに縮小 */
 .image-container {
-    max-width: 25%;  /* もともと50%だったので、1/4に */
-    max-height: 35vh; /* もともと70vhだったので、1/4に */
+    width: 15vw;  /* ビューポートの幅の 15% (さらに小さく) */
+    height: 15vh; /* ビューポートの高さの 15% */
     cursor: pointer;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 画像のスタイル */
@@ -19,4 +22,18 @@ img {
 /* アクティブな画像を表示 */
 img.active {
     opacity: 1;
+}
+
+/* 全体を中央揃え */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
