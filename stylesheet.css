@@ -43,13 +43,16 @@
         
         /* 画像ギャラリー */
         .gallery {
-            margin-left: 270px;
-            padding: 20px;
-            width: calc(100% - 270px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto; /* ← スクロール可能にする */
+}
+
         
         .gallery img {
             max-width: 100%;
