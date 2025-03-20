@@ -12,26 +12,24 @@ body {
     height: 100vh;
 }
 
-/* 画像コンテナのサイズをさらに縮小 */
+/* 画像コンテナ */
 .image-container {
-    width: 15vw;  /* 画像サイズをさらに小さく */
-    height: auto;
-    cursor: pointer;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* 縦に並べる */
     justify-content: center;
     align-items: center;
-    gap: 40px; /* 画像同士の間隔を調整 (40px) */
+    gap: 60px; /* 画像間のスペースを広げる */
 }
 
 /* 画像のスタイル */
 img {
-    width: 100%;  /* 親要素 (.image-container) に合わせる */
+    width: 10vw;  /* 画像サイズをさらに小さく */
     height: auto;
+    max-height: 10vh; /* 画像の高さも調整 */
     object-fit: cover;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    display: block; /* 画像を縦に並べる */
+    display: block;
 }
 
 /* アクティブな画像を表示 */
