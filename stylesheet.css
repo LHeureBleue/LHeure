@@ -1,38 +1,86 @@
-/* 背景と基本スタイル */
-body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-/* 画像コンテナ */
-.image-container {
-    display: flex;
-    flex-direction: column; /* 縦に並べる */
-    justify-content: center;
-    align-items: center;
-    gap: 60px; /* 画像間のスペースを広げる */
-}
-
-/* 画像のスタイル */
-img {
-    width: 100px;  /* 画像サイズをさらに小さく */
-    height: auto;
-    max-height: 100px; /* 画像の高さも調整 */
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    display: block;
-}
-
-/* アクティブな画像を表示 */
-img.active {
-    opacity: 1;
-}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            display: flex;
+            background-color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* 左側のメニュー */
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 1px solid #ddd;
+        }
+        
+        .sidebar h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .sidebar a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        
+        /* 画像ギャラリー */
+        .gallery {
+            margin-left: 270px;
+            padding: 20px;
+            width: calc(100% - 270px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 左側メニュー -->
+    <aside class="sidebar">
+        <h1>金子山 写真EXPO</h1>
+        <nav>
+            <a href="#profile">Profile</a>
+            <a href="#books">Books</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        </nav>
+    </aside>
+    
+    <!-- 画像ギャラリー -->
+    <section class="gallery">
+        <img src="image1.jpg" alt="Photo 1">
+        <img src="image2.jpg" alt="Photo 2">
+        <img src="image3.jpg" alt="Photo 3">
+        <img src="image4.jpg" alt="Photo 4">
+        <img src="image5.jpg" alt="Photo 5">
+    </section>
+    
+</body>
+</html>
