@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px; /* 画面の横に余白を追加 */
 }
 
 /* 画像コンテナ */
@@ -18,14 +19,15 @@ body {
     flex-direction: column; /* 縦に並べる */
     justify-content: center;
     align-items: center;
-    gap: 60px; /* 画像間のスペースを広げる */
+    gap: 80px; /* 画像間のスペースを広げる */
+    max-width: 90%; /* 横方向の余白を確保 */
 }
 
 /* 画像のスタイル */
 img {
-    width: 100px;  /* 画像サイズをさらに小さく */
+    width: 80px;  /* 画像サイズを小さく */
     height: auto;
-    max-height: 100px; /* 画像の高さも調整 */
+    max-height: 80px; /* 画像の高さを調整 */
     object-fit: cover;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
