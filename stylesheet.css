@@ -21,6 +21,7 @@ body {
     align-items: center;
     gap: 80px; /* 画像間のスペースを広げる */
     max-width: 90%; /* 横方向の余白を確保 */
+    vertival-align:bottom;
 }
 
 /* 画像のスタイル */
