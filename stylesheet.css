@@ -52,7 +52,7 @@ body {
 }
 
 .gallery img {
-    max-width: 80%; /* 画像の最大幅を設定 */
+    max-width: 320px; /* 画像の最大幅を設定 */
     height: auto; /* アスペクト比を維持 */
     display: none; /* ページごとに表示するためデフォルトは非表示 */
     margin-bottom: 20px;
