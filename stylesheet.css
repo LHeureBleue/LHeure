@@ -13,7 +13,7 @@ $img-url2: "https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=r
 
 i {
   opacity: 0;
-  font-size: 18px;
+  font-size: 50px;
   color: #fff;
   will-change: transform;
   -webkit-transform: scale(0.1);
@@ -231,7 +231,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 50;
     padding: 20px; /* 画面の横に余白を追加 */
 }
 
@@ -241,16 +241,15 @@ body {
     flex-direction: column; /* 縦に並べる */
     justify-content: center;
     align-items: center;
-    gap: 80px; /* 画像間のスペースを広げる */
+    gap: 500px; /* 画像間のスペースを広げる */
     max-width: 90%; /* 横方向の余白を確保 */
-    vertival-align:bottom;
 }
 
 /* 画像のスタイル */
 img {
-    width: 80px;  /* 画像サイズを小さく */
+    width: 20px;  /* 画像サイズを小さく */
     height: auto;
-    max-height: 80px; /* 画像の高さを調整 */
+    max-height: 20px; /* 画像の高さを調整 */
     object-fit: cover;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
