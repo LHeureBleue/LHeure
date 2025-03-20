@@ -23,9 +23,9 @@ body {
 
 /* 画像のスタイル */
 img {
-    width: 10vw;  /* 画像サイズをさらに小さく */
+    width: 100px;  /* 画像サイズをさらに小さく */
     height: auto;
-    max-height: 10vh; /* 画像の高さも調整 */
+    max-height: 100px; /* 画像の高さも調整 */
     object-fit: cover;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
